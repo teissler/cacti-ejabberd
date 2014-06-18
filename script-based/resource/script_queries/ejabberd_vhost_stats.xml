@@ -1,0 +1,32 @@
+<interface>
+   <name>Get ejabberd Vhost Statistics</name>
+   <description>Queries ejabberd Vhost Statistics.</description>
+   <script_path>sudo -u jabber |path_cacti|/scripts/query_ejabberd_vhost_stats.sh</script_path>
+   <arg_index>index</arg_index>
+   <arg_num_indexes>num_indexes</arg_num_indexes>
+   <arg_query>query</arg_query>
+   <arg_get>get</arg_get>
+   <output_delimeter>:</output_delimeter>
+   <index_order>ejabberdVhost</index_order>
+   <index_order_type>alphabetic</index_order_type>
+   <index_title_format>|chosen_order_field|</index_title_format>
+
+   <fields>
+      <ejabberdVhost>
+         <name>virtual Host</name>
+         <direction>input</direction>
+         <query_name>vhost</query_name>
+      </ejabberdVhost>
+
+      <ejabberdActiveUsers>
+         <name>active Users</name>
+         <direction>output</direction>
+         <query_name>active_users</query_name>
+      </ejabberdActiveUsers>
+      <ejabberdUserRegistrations>
+         <name>registered Users</name>
+         <direction>output</direction>
+         <query_name>user_regs</query_name>
+      </ejabberdUserRegistrations>
+   </fields>
+</interface>
